@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand font-weight-bold"> <img src="imagenes\abeja.png" width="40">EL PANAL
+    </a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="#">INICIO</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">NOSOTROS</a>
+            </li>
+            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> PRODUCTOS </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">MIEL</a> <a class="dropdown-item" href="#">ALGARROBINA</a> <a class="dropdown-item" href="#">POLEN</a>
+                </div>
+            </li>
+            <div class="btn-group dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> PEDIDOS </a>
+                <form class="form-inline my-2 my-lg-0">
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+                        <div>
+                            <label>Nombre:</label> <input type="text" class="text-center" placeholder="Ingrese Nombre">
+                        </div>
+                        <div>
+                            <label>Apellido:</label> <input type="text" class="text-center" placeholder="Ingrese Apellido">
+                        </div>
+                        <div>
+                            <label>Teléfono:</label> <input type="text" class="text-center" placeholder="Ingrese Teléfono">
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <div class="text-center">
+                            <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" aria-setsize="">Realizar Pedido</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </ul>
+
+        <div class="btn-group dropleft">
+            <button type="button" class="btn btn-outline-warning my-2 my-sm-0 dropdown-toggle text-dark" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">INGRESAR</button>
+            <form class="form-inline my-2 my-lg-0" th:action="@{/login}" method="Post">
+                <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-left">
+                    <div>
+                        <label>Usuario:</label> <input type="text" th:name="txtUsuario" class="text-center" placeholder="Ingrese Usuario" autofocus required>
+                    </div>
+                    <div>
+                        <label>Contraseña:</label> <input type="password" th:name="txtContrasena" class="text-center" placeholder="Ingrese Contraseña" autofocus required>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class="text-center">
+                        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" aria-setsize="">Continuar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>
